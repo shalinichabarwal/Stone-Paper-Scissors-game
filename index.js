@@ -1,4 +1,10 @@
-var random = Math.floor(Math.random() * 3) + 1;
+
+var array = document.querySelectorAll(".btn");
+for (var i = 0; i < array.length; i++) {
+  array[i].addEventListener("click", game);
+}
+function game(){
+  var random = Math.floor(Math.random() * 3) + 1;
 
 if (random == 2) {
   var src = "./Stone, paper, scissor/paper.jpg";
@@ -8,11 +14,6 @@ if (random == 2) {
   var src = "./Stone, paper, scissor/scissor.jpg";
 }
 
-var array = document.querySelectorAll(".btn");
-for (var i = 0; i < array.length; i++) {
-  array[i].addEventListener("click", game);
-}
-function game(){
   document.querySelector("#image").setAttribute("src", src);
 
   if (this.innerHTML == random + "<img src=" +'"'+ src + '">') {
