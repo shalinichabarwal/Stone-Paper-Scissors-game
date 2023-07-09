@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper and Scissors game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .bg1 {
+        width: 100%;
+        position: relative;
+        height: 700px;
+      }
+      .text {
+        position: absolute;
+        top: 90px;
+        text-align: center;
+        font-family: "Lobster", cursive;
+        color: #913010;
+        margin: 0px;
+        width: 100%;
+      }
+      h1 {
+        margin-top: 30px;
+        font-size: 6rem;
+        margin-bottom: 0px;
+      }
+      .title {
+        display: flex;
+        justify-content: center;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      .bg2,
+      .bg3 {
+        width: 100%;
+        position: relative;
+        height: 800px;
+      }
+
+      .inst {
+        position: absolute;
+        width: 100%;
+        text-align: left;
+        top: 750px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main {
+        font-size: 3.5rem;
+        color: seagreen;
+        /* margin-left: 35%; */
+      }
+      li {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        margin-left: 20px;
+      }
+      .enjoy {
+        /* margin-left: 35%;
+        margin-top: 50px; */
+        font-size: 3rem;
+        color: green;
+      }
+      .play {
+        font-size: 6rem;
+        font-family: "Lobster", cursive;
+        color: #913010;
+        position: absolute;
+        top: 1550px;
+      }
+      .flc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      #pl {
+        display: flex;
+        justify-content: center;
+      }
+      .game {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .flr {
+        display: flex;
+        position: absolute;
+        top: 1800px;
+      }
+      #ins,
+      #enj {
+        display: flex;
+        justify-content: center;
+      }
+      .btn {
+        background-image: url("paper.jpg");
+        font-size: 24px;
+        border-radius: 5%;
+      }
+      #image {
+        border: 2px solid black;
+        border-radius: 5%;
+      }
+      .user {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: #913010;
+        font-size: 2.5rem;
+      }
+      @media (min-width: 650px) and (max-width: 995px) {
+        .main {
+          font-size: 2.5rem;
+        }
+        li,
+        .enjoy {
+          font-size: 2.3rem;
+        }
+      }
+      @media (max-width: 400px) {
+        .main {
+          font-size: 2.5rem;
+        }
+        li,
+        .enjoy {
+          font-size: 1.7rem;
+        }
+      }
+      @media (min-width: 401px) and (max-width: 650px) {
+        .main {
+          font-size: 2.5rem;
+        }
+        li,
+        .enjoy {
+          font-size: 2rem;
+        }
+      }
+      @media (max-width: 338px) {
+        .play {
+          margin-left: 20px;
+        }
+        .name {
+          font-size: 4rem;
+        }
+      }
+      @media (max-width: 600px) {
+        .flc {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+      @media (max-width: 460px) {
+        img {
+          height: 130px;
+          width: 130px;
+        }
+      }
+      @media (min-width: 778px) and (max-width: 987px) {
+        .bg3 {
+          height: 1000px;
+        }
+      }
+
+      p {
+        position: absolute;
+        top: 2280px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      @media (max-width: 777px) {
+        .bg3 {
+          height: 1500px;
+        }
+        p {
+          position: absolute;
+          top: 2900px;
+        }
+      }
+      @media (min-width: 778px) and (max-width: 990px) {
+        p {
+          position: absolute;
+          top: 2490px;
+        }
+      }
+      img {
+        height: 170px;
+        width: 170px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title container">
+      <img class="bg1" src="./background img.PNG" alt="background image" />
+      <div class="text">
+        <h2>Welcome to</h2>
+        <h1 class="name">
+          Stone, Paper <br />
+          and <br />
+          Scissors
+        </h1>
+        <h2>game</h2>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <img class="bg2" src="./bg1.PNG" alt="background image" />
+      <div class="inst container">
+        <div id="ins" class="container"><h2 class="main">Instructions</h2></div>
+        <div id="list">
+          <ul>
+            <li>One player is computer and other player is user.</li>
+            <li>
+              User make their choice by clicking on the respective button.
+            </li>
+            <li>In case of stone and paper, Paper wins.</li>
+            <li>In case of stone and scissors, Stone wins.</li>
+            <li>In case of scissors and paper, Scissors wins.</li>
+          </ul>
+        </div>
+        <div id="enj" class="container">
+          <h2 class="enjoy">Enjoy the game!</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container game">
+      <img class="bg3" src="./bg3.PNG" alt="background image" />
+      <div class="container" id="pl"><h1 class="play">Let's play</h1></div>
+      <div class="flr container">
+        <div class="flc container">
+          <h2 class="user">Computer</h2>
+          <img id="image" src="./paper.jpg" />
+        </div>
+        <div class="flc container">
+          <h2 class="user">User</h2>
+          <div>
+            <button class="btn btn1">1<img src="./rock.jpg" /></button>
+            <button class="btn btn2">2<img src="./paper.jpg" /></button>
+            <button class="btn btn2">3<img src="./scissor.jpg" /></button>
+          </div>
+        </div>
+      </div>
+      <p>
+        Made with
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-heart-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+          />
+        </svg>
+        by Shalini
+      </p>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
